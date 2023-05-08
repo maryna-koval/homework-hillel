@@ -1,31 +1,24 @@
 password = input('Enter your password ')
 score = 0
-if len(password) < 8:
+special_char = '+-/_%$#@!&*'
+if len(password) >= 8:
+    score += 1
+else:
     print('The minimum password length is 8')
-else:
+if any(char.isdigit() for char in password):
     score += 1
-if password.isalpha():
+else:
     print('Use numbers')
-else:
+if any(char.islower() for char in password):
     score += 1
-if password.islower():
-    print('Use capital letters')
 else:
-    score += 1
-if password.isupper():
     print('Use small letters')
+if any(char.isupper() for char in password):
+    score += 1
 else:
-    score += 1
-if password.__contains__('+'):
-    score += 1
-elif password.__contains__('-'):
-    score += 1
-elif password.__contains__('/'):
-    score += 1
-elif password.__contains__('_'):
-    score += 1
-elif password.__contains__('%'):
+    print('Use capital letters')
+if any(char in special_char for char in password):
     score += 1
 else:
     print('Use special characters')
-print(f'score = {score}')
+print(f'Password score = {score}')
