@@ -3,11 +3,11 @@ numbers = []
 for i in range(5):
     number = int(input('Enter your number '))
     numbers.append(number)
-print('Your list is', numbers)
+print('Your list is:', *numbers)
 print('Завдання №2')
 A = [1, 2, 3, 4, 5]
 A.pop()
-print(A)
+print(*A)
 print('Завдання №3')
 B = []
 for i in range(10):
@@ -23,7 +23,7 @@ for i in range(a):
     numbers = int(input('Enter your number '))
     C.append(numbers)
 C.reverse()
-print(C)
+print(*C)
 print('Завдання №5')
 D = []
 E = []
@@ -33,7 +33,7 @@ for i in range(5):
 for numbers in D:
     if numbers > 5:
         E.append(numbers)
-print(E)
+print('Numbers > 5 are' *E)
 print('Завдання №6')
 k = int(input('Enter length of the list '))
 F = []
