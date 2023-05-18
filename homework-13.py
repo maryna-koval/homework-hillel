@@ -1,7 +1,7 @@
 n = int(input("Enter amount of files: "))
 file_permissions = {}
 for i in range(n):
-    user_input = input("Enter name of files and permissions (example, 'file.txt R W'): ")
+    user_input = input("Enter name of files and permissions (example, 'file.txt R W X'): ")
     input_parts = user_input.split()
     file = input_parts[0]
     permissions = input_parts[1:]
@@ -13,8 +13,6 @@ for i in range(m):
     query, file = input("Enter your request (example, 'read file.txt'): ").split()
     queries.append(query)
     files.append(file)
-    print(queries)
-    print(files)
 for i in range(m):
     query = queries[i]
     file = files[i]
